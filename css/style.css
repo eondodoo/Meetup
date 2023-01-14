@@ -9,7 +9,14 @@ body {
   margin: 0;
   background-color: #fafafa;
 }
-.tablet, .mobile{
+
+.tablet{
+  display: none;
+}
+.mobile{
+  display: none;
+}
+.tablet-footer-text{
   display: none;
 }
 a {
@@ -163,7 +170,8 @@ a {
 .pic-card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  flex-flow: wrap;
   align-items: center;
   margin: 64px auto;
   width: 1110px;
@@ -171,9 +179,9 @@ a {
   stroke: #979797;
 }
 .pic-card img {
-  margin-left: 30px;
   width: 255px;
   height: 242px;
+  margin: auto;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -292,6 +300,9 @@ footer {
   .hero {
     display: none;
   }
+  .mobile{
+    display: none;
+  }
   body {
     width: 768px;
   }
@@ -369,14 +380,10 @@ footer {
     background-color: #b18bdd;
   }
   .pic-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 689px;
     height: 156px;
     stroke: #979797;
-
+    margin: auto;
   }
   .pic-card img {
     width: 164px;
@@ -395,6 +402,8 @@ footer {
   .new-hero .new-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
   }
   .new-text h6 {
@@ -482,46 +491,47 @@ footer {
   .tablet-footer-text .cta-3 span:hover {
     color: #d9b8ff;
   }
-  
-
 }
 
 /* MOBILE */
-/* @media only screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   .hero {
     display: none;
   }
   .tablet{
     display: none;
   }
-  .logo{
-    margin-bottom: 54px;
-  }
+
   .header{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 54px 128px 80px 128px;
+    margin: 54px auto 0;
   }
   body {
     width: 375px;
-    background-color: indianred;
     margin: 0;
     padding: 0;
-    border: 5px dotted teal;
   }
-  .mobile .image img {
-    width: 414px;
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+   .mobile .image img {
+    width: 375px;
     height: 153px;
+    margin-top: 54px;
     object-fit: cover;
-  }
-  .mobile .mobile-hero {
+  } 
+   .mobile .mobile-hero {
     width: 327px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0 auto;
   }
   .mobile .mobile-hero h1 {
     margin-top: 48px;
@@ -535,7 +545,7 @@ footer {
     text-align: center;
     height: 78px;
     font-size: 16px;
-    margin: 24px 0 0 0;
+    margin-top: 24px;
   }
   .mobile .mobile-hero .ctas {
     display: flex;
@@ -547,7 +557,10 @@ footer {
     gap: 17px;
   }
   .design{
-    margin: 0;
+    margin: 64px 0 0;
+    width: 56px;
+    align-items: center;
+    height: 140px;
   }
   .mobile .mobile-hero .cta-1 {
     font-size: 16px;
@@ -588,14 +601,21 @@ footer {
     color: #ffffff;
     background-color: #b18bdd;
   }
+
   .pic-card {
-    display: flex;
-    flex-wrap: wrap;
+    width: 327px;
+    height: 310px;
+    margin: 64px auto 0;
+  }
+  .box{
+    width: 40%;
   }
   .pic-card img {
     width: 151px;
     height: 143px;
+    margin: auto;
   }
+
   .new-hero {
     width: 327px;
     height: 284px;
@@ -603,28 +623,89 @@ footer {
     align-items: center;
   }
   .new-hero .new-text {
-    margin: 72px;
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
   .new-text h6 {
     font-size: 16px;
+    width: 271px;
+    height: 26px;
+    margin-top: 64px;
   }
-  .new-text {
-    font-size: 36px;
+  .new-text h2{
+    font-size: 32px;
+    margin-top: 24px;
+    width: 327px;
+    height: 72px;
   }
   .new-text p {
     font-size: 16px;
+    margin-top: 32px;
+    margin-bottom: 0;
+    width: 327px;
+    height: 110px;
   }
   footer {
     width: 375px;
+    height: 428px;
     position: relative;
-    padding: 133px 165px;
     color: white;
-    height: 308px;
     background: url("../assest/mobile/image-footer.jpg") no-repeat;
     background-size: cover;
     overflow: hidden;
   } 
+  .mobile-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 92px auto;
+    width: 327px; 
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-footer h4 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 0;
+    width: 327px;
+    height: 72px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .tablet-footer-text p{
+    display: none;
+  }
+  .mobile-footer p {
+    font-size: 18px;
+    margin: 32px 0;
+    text-align: center;
+    width: 327px;
+    height: 78px;
+  }
+  .mobile-footer .cta-3 {
+    font-size: 16px;
+    background-color: #855fb1;
+    border: none;
+    color: #ffffff;
+    height: 58px;
+    width: 193px;
+    margin-top: 32px;
+    padding: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .mobile-footer .cta-3 span {
+    color: #d9b8ff;
+  }
+  
+  .mobile-footer .cta-3:hover {
+    color: #ffffff;
+    background-color: #b18bdd;
+  }
+  .mobile-footer .cta-3 span:hover {
+    color: #d9b8ff;
+  }
 }
-*/
+
 
