@@ -397,7 +397,7 @@ footer {
     margin: 0;
     width: 573px;
     height: 240px;
-    margin: 0 auto;
+    margin: 74px auto 0;
   }
   .new-hero .new-text {
     display: flex;
@@ -667,16 +667,17 @@ footer {
   .mobile-footer h4 {
     font-size: 32px;
     text-align: center;
+    margin-top: 0;
     margin-bottom: 0;
     width: 327px;
     height: 72px;
     font-weight: 700;
     line-height: 1;
   }
-  .tablet-footer-text p{
+  .tablet-p {
     display: none;
   }
-  .mobile-footer p {
+  .mobile-footer .mobile p {
     font-size: 18px;
     margin: 32px 0;
     text-align: center;
