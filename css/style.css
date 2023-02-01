@@ -740,6 +740,7 @@
   .pic-card img {
     width: 151px;
     height: 143px;
+    border-radius: 10px;
     margin: 0 auto;
   }
   .new-hero {
