@@ -578,7 +578,7 @@
 }
 
 /* MOBILE */
-@media only screen and (max-width: 640px) and (min-width:280px)  {
+@media only screen and (max-width: 640px) and (min-width:320px)  {
   .hero {
     display: none;
   }
